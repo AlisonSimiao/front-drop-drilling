@@ -16,10 +16,12 @@
 .left input {
   width: 300px;
   margin-bottom: 10px;
+  padding: .5rem 1rem;
 }
 
 .left button {
   margin-top: 20px;
-  width: 320px;
+  width: 300px;
+  padding: .5rem 1rem;
   cursor: pointer;
 }

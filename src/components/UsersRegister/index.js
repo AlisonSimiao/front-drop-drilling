@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
+import useUser from '../../hooks/userUser';
 import './styles.css';
 
-function UsersRegister({
-  userInEditing,
-  setUserInEditing,
-  usersData,
-  setUsersData
-}) {
+function UsersRegister() {
+
+  const {
+    userInEditing,
+    setUserInEditing,
+    usersData,
+    setUsersData
+  } = useUser();
+  
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
@@ -20,6 +24,8 @@ function UsersRegister({
     setName('');
     setAge('');
   }, [userInEditing]);
+
+  console.log( useUser() );
 
   async function handleRegisterUser() {
 

@@ -1,10 +1,11 @@
 import UsersIcon from '../../assets/users.svg';
+import useUser from '../../hooks/userUser';
 import Empty from '../Empty';
 import UsersReport from '../UsersReport';
 import './styles.css';
 
-function UsersList({ usersData, setUserInEditing, handleDeleteUser }) {
-
+function UsersList() {
+  const { usersData, setUserInEditing, handleDeleteUser } = useUser();
   return (
     <div className="right">
       {usersData.length > 0 &&
